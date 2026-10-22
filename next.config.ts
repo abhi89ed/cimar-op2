@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Static export to `out/` for Cloudflare Pages (no Node server). Export mode can't
+  // run Cache Components / Partial Prerendering, so those stay off.
+  output: "export",
   images: {
-    // Next 16 only serves qualities listed here; 75 is the default, 85 is used for photography.
-    qualities: [75, 85],
-    formats: ["image/avif", "image/webp"],
+    // The default optimizer needs a server. Assets in public/images are already
+    // cropped to ~2× display size and compressed, so they're served as-is.
+    unoptimized: true,
   },
 };
 

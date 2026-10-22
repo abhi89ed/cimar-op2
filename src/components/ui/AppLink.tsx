@@ -42,8 +42,9 @@ export function AppLink({ href, children, ...rest }: AppLinkProps) {
       </a>
     );
   }
+  // "/" is this page: prefetching it only adds an aborted probe in the static export.
   return (
-    <Link href={href} {...rest}>
+    <Link href={href} prefetch={href === "/" ? false : undefined} {...rest}>
       {children}
     </Link>
   );
