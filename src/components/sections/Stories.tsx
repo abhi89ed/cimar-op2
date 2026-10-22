@@ -2,11 +2,10 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { stories } from "@/data/site";
 import { fl } from "@/lib/fluid";
-import { AppLink } from "@/components/ui/AppLink";
 import { CtaLink } from "@/components/ui/Cta";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { PlayIcon } from "@/components/ui/icons";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { StoryVideo } from "./StoryVideo";
 
 const { testimonial, videos } = stories;
 const widths = [897, 1023];
@@ -71,24 +70,13 @@ export function Stories() {
           </figure>
         </li>
         {videos.map((v, i) => (
-          <li key={v.href} className="flex snap-start">
-            <AppLink
-              href={v.href}
-              aria-label={v.label}
-              className="group relative block min-h-(--h) w-(--w) cursor-pointer overflow-hidden rounded-card bg-placeholder max-md:aspect-897/687 max-md:min-h-0 max-md:w-full"
+          <li key={v.video} className="flex snap-start">
+            <StoryVideo
+              label={v.label}
+              video={v.video}
+              poster={v.image}
               style={{ "--w": fl(widths[i], widths[i] * 0.45) } as CSSProperties}
-            >
-              <Image src={v.image.src} alt={v.image.alt} fill sizes="(max-width: 767px) 92vw, 55vw" quality={85} className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-              {v.playButton && (
-                <span
-                  aria-hidden
-                  className="absolute top-1/2 left-1/2 grid -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white text-brand shadow-lg transition-transform duration-300 group-hover:scale-110 group-active:scale-95"
-                  style={{ width: fl(114, 72), height: fl(114, 72) }}
-                >
-                  <PlayIcon className="w-[43.9%]" />
-                </span>
-              )}
-            </AppLink>
+            />
           </li>
         ))}
       </ul>

@@ -274,8 +274,8 @@ export const stories = {
     avatar: { src: "/images/testimonial-aadil-sudhir.jpg", alt: "", width: 234, height: 234 } satisfies Img,
   },
   videos: [
-    { label: "Watch: a mother’s story at CIMAR", href: "/stories/video-1", playButton: true, image: { src: "/images/story-baby-tricycle.jpg", alt: "Baby on a wooden tricycle steadied by his mother", width: 1402, height: 1074 } },
-    { label: "Watch: welcoming a new arrival", href: "/stories/video-2", playButton: false, image: { src: "/images/story-mother-baby.jpg", alt: "Mother holding her baby close", width: 2046, height: 1374 } },
+    { label: "Watch: a mother’s story at CIMAR", video: "https://videos.pexels.com/video-files/8047419/8047419-hd_1920_1080_25fps.mp4", image: { src: "/images/story-baby-tricycle.jpg", alt: "Baby on a wooden tricycle steadied by his mother", width: 1402, height: 1074 } },
+    { label: "Watch: welcoming a new arrival", video: "https://videos.pexels.com/video-files/6181457/6181457-hd_1920_1080_25fps.mp4", image: { src: "/images/story-mother-baby.jpg", alt: "Mother holding her baby close", width: 2046, height: 1374 } },
   ],
 };
 
