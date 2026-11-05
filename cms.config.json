@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "content/home.json",
+      "label": "Home page",
+      "description": "Every section of the home page, top to bottom."
+    },
+    {
+      "path": "content/site.json",
+      "label": "Site settings",
+      "description": "Site name and Google description, navigation menu, search box and footer."
+    }
+  ],
+  "media": {
+    "publicDir": "public",
+    "uploadDir": "public/uploads",
+    "maxImageSize": 2400,
+    "imageQuality": 0.82
+  },
+  "hiddenKeys": ["width", "height", "titleBox", "box", "right", "bottom"],
+  "labels": {
+    "eyebrow": "Small heading",
+    "nav": "Navigation menu",
+    "readMore": "“Read more” text",
+    "careTeam": "Care team",
+    "clinicTour": "Clinic tour",
+    "doctorsTeaser": "Faded doctors row",
+    "panelTeaser": "Faded portraits row"
+  },
+  "fields": {
+    "content/home.json": {
+      "hero.features[].icon": { "type": "select", "options": ["activity", "cloud-rain"] },
+      "hero.image": { "label": "Photo" },
+      "services[].tone": { "type": "select", "options": ["navy", "teal"], "label": "Colour" },
+      "services[].illustration": { "hidden": true },
+      "highlights.podcast.illustration": { "hidden": true },
+      "highlights.event.decor": { "hidden": true },
+      "highlights.stats[].tone": { "type": "select", "options": ["navy", "teal"], "label": "Colour" },
+      "highlights.stats[].decor": { "hidden": true },
+      "partners.logos": { "label": "Partner logos" },
+      "specialties.featured": {
+        "label": "Highlighted specialty",
+        "help": "Which item is highlighted when the page loads, counting from 0."
+      },
+      "clinicTour.initialIndex": {
+        "label": "First slide in view",
+        "help": "Which slide sits at the snap line when the page loads, counting from 0."
+      },
+      "clinicTour.slides": { "label": "Photos" },
+      "directors.backdrop": { "label": "Background photo" },
+      "stories.videos": { "label": "Story videos" },
+      "stories.videos[].video": { "type": "video", "help": "Upload an MP4, or paste a direct link to an .mp4 file. YouTube and Vimeo links won't play in this section." },
+      "stories.videos[].image": { "label": "Thumbnail" },
+      "locations.items[].rating": { "help": "Google rating, for example 4.4" },
+      "locations.items[].reviews": { "label": "Review count", "help": "Shown next to the rating, for example 850+" }
+    },
+    "content/site.json": {
+      "site": { "label": "Name & Google listing" },
+      "site.fullName": { "label": "Full name", "help": "Used as the browser tab and Google result title." },
+      "site.description": {
+        "label": "Google description",
+        "help": "Shown under the title in Google results. Aim for 140–160 characters."
+      },
+      "logo": { "hidden": true },
+      "search.action": { "hidden": true },
+      "footer.credit": { "hidden": true }
+    }
+  }
+}

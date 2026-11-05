@@ -1,0 +1,179 @@
+{
+  "site": {
+    "name": "CIMAR",
+    "fullName": "CIMAR — The Women's Hospital",
+    "description": "Complete healthcare designed for mothers and little ones. CIMAR makes expert fertility, maternity and paediatric care simple, safe and personal in Kochi, Thrissur and Edappal."
+  },
+  "logo": {
+    "color": "/images/logo.svg",
+    "mono": "/images/logo-mono.svg",
+    "wordmark": "/images/wordmark-mono.svg",
+    "alt": "CIMAR — The Women's Hospital"
+  },
+  "nav": [
+    {
+      "label": "Healthcare services",
+      "href": "/services",
+      "children": [
+        {
+          "label": "Obstetrics",
+          "href": "/services/obstetrics"
+        },
+        {
+          "label": "Gynaecology",
+          "href": "/services/gynaecology"
+        },
+        {
+          "label": "Neonatology",
+          "href": "/services/neonatology"
+        },
+        {
+          "label": "Infertility & IVF",
+          "href": "/services/infertility"
+        },
+        {
+          "label": "Fetal medicine",
+          "href": "/services/fetal-medicine"
+        },
+        {
+          "label": "All specialties",
+          "href": "#specialties"
+        }
+      ]
+    },
+    {
+      "label": "Training programmes",
+      "href": "/training",
+      "children": [
+        {
+          "label": "Fellowship programmes",
+          "href": "/training/fellowships"
+        },
+        {
+          "label": "Clinical embryology",
+          "href": "/training/embryology"
+        },
+        {
+          "label": "Ultrasound training",
+          "href": "/training/ultrasound"
+        }
+      ]
+    },
+    {
+      "label": "About us",
+      "href": "/about",
+      "children": [
+        {
+          "label": "Our story",
+          "href": "/about"
+        },
+        {
+          "label": "Our care team",
+          "href": "#care-team"
+        },
+        {
+          "label": "Our locations",
+          "href": "#locations"
+        },
+        {
+          "label": "News & blog",
+          "href": "#news"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "search": {
+    "label": "Search the site",
+    "placeholder": "Search here…",
+    "action": "/search"
+  },
+  "footer": {
+    "columns": [
+      {
+        "heading": "More info",
+        "links": [
+          {
+            "label": "Training programmes",
+            "href": "/training"
+          },
+          {
+            "label": "Healthcare services",
+            "href": "/services"
+          },
+          {
+            "label": "About us",
+            "href": "/about"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          },
+          {
+            "label": "Locations",
+            "href": "#locations"
+          }
+        ]
+      },
+      {
+        "heading": "Follow us",
+        "links": [
+          {
+            "label": "Instagram",
+            "href": "https://www.instagram.com/"
+          },
+          {
+            "label": "Facebook",
+            "href": "https://www.facebook.com/"
+          },
+          {
+            "label": "YouTube",
+            "href": "https://www.youtube.com/"
+          }
+        ]
+      }
+    ],
+    "newsletter": {
+      "heading": "Let's keep in touch",
+      "treatmentLabel": "Select treatment",
+      "treatmentPlaceholder": "Choose a treatment",
+      "treatments": [
+        "Fertility & IVF",
+        "Obstetrics",
+        "Gynaecology",
+        "Neonatology",
+        "Fetal medicine",
+        "Other"
+      ],
+      "emailLabel": "Email address",
+      "note": "By submitting your email you agree to our Terms of Use and agree that we can contact you as described in our Privacy Policy.",
+      "submit": "Send",
+      "success": "Thanks — we’ll be in touch soon.",
+      "errors": {
+        "treatment": "Please choose a treatment.",
+        "emailMissing": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address."
+      }
+    },
+    "legal": [
+      {
+        "label": "Privacy policy",
+        "href": "/privacy-policy"
+      },
+      {
+        "label": "Terms & conditions",
+        "href": "/terms"
+      }
+    ],
+    "copyright": "© 2023 CIMAR, Inc. All rights reserved",
+    "credit": {
+      "prefix": "Powered by",
+      "label": "Explaineddigital",
+      "suffix": "the better agency",
+      "href": "https://explaineddigital.com"
+    }
+  }
+}

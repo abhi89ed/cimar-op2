@@ -17,12 +17,27 @@ npm run lint
 | `src/app/page.tsx` | Composes the sections, nothing else |
 | `src/app/layout.tsx` | Outfit font, skip link, header/footer, page wrapper |
 | `src/app/globals.css` | Design tokens in `@theme` (colours, fluid type scale, radii, container) |
-| `src/data/site.ts` | All copy, image paths and link destinations |
+| `content/site.json`, `content/home.json` | All copy, image paths, link destinations and videos (edited in the admin portal) |
+| `src/data/site.ts` | Re-exports the content JSON with types |
+| `cms.config.json` | How the admin portal labels, hides and types each field |
 | `src/components/sections/` | One component per page section |
 | `src/components/layout/` | Header (dropdown nav, mobile menu dialog), footer, newsletter form |
 | `src/components/ui/` | `AppLink`, CTA, logo, eyebrow, icons, carousel button |
 | `src/hooks/useSnapCarousel.ts` | Prev/next + loop for native scroll-snap tracks |
 | `src/lib/fluid.ts` | `fl(px, min)` → `clamp(min, px/1728·100vw, px)` |
+
+## Editing content and deploying
+
+Copy, images and videos are edited in the admin portal (`../admin-portal`). Each save is a
+commit to `main` that changes `content/*.json` (and adds images under `public/uploads/`).
+`.github/workflows/deploy.yml` then builds the static export and deploys it to Cloudflare
+Pages, so code pushes to `main` deploy too. The workflow needs the repo secrets
+`CLOUDFLARE_API_TOKEN` (Cloudflare Pages: Edit) and `CLOUDFLARE_ACCOUNT_ID`.
+`npm run deploy` still works for a manual deploy.
+
+When editing the JSON by hand, keep the shapes the components expect. The literal types
+(`HeroIcon`, `Tone`) are declared in `src/data/site.ts`, and `npm run build` type-checks
+them.
 
 ## Conventions
 
@@ -32,7 +47,7 @@ npm run lint
 
 ## Links are inert until pages exist
 
-`src/components/ui/AppLink.tsx` exports `PAGES_LIVE = false`. While it's false, every link except in-page anchors (`#…`) and `/` renders as `<a role="link" aria-disabled="true" tabIndex={0}>` with no `href` — this includes social links, the search form and the footer credit. The real destinations stay in `src/data/site.ts`; set the flag to `true` to switch them all on.
+`src/components/ui/AppLink.tsx` exports `PAGES_LIVE = false`. While it's false, every link except in-page anchors (`#…`) and `/` renders as `<a role="link" aria-disabled="true" tabIndex={0}>` with no `href` — this includes social links, the search form and the footer credit. The real destinations stay in `content/*.json`; set the flag to `true` to switch them all on.
 
 ## Placeholders to replace
 
